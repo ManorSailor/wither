@@ -1,0 +1,40 @@
+{
+  "name": "wither",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManorSailor/wither.git"
+  },
+  "keywords": [],
+  "author": "Sars",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ManorSailor/wither/issues"
+  },
+  "homepage": "https://github.com/ManorSailor/wither#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.2",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "postcss": "^8.4.19",
+    "postcss-loader": "^7.0.1",
+    "postcss-preset-env": "^7.8.3",
+    "prettier": "2.8.1",
+    "style-loader": "^3.3.1",
+    "tailwindcss": "^3.2.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "date-fns": "^2.29.3",
+    "iconify-icon": "^1.0.2"
+  }
+}
