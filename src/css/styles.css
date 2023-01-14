@@ -2,3 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  input {
+    transition: border 300ms;
+    border: 2px solid;
+    @apply border-sky-800;
+  }
+
+  input:focus {
+    outline: none;
+    border: 2px solid;
+    @apply border-cyan-400;
+  }
+
+  /* Hide the label when the user is typing in the field. 
+  Using empty placeholder is required because when user types, 
+  placeholders are hidden automatically by the browser */
+  input:not(:placeholder-shown) + span {
+    visibility: hidden;
+  }
+}

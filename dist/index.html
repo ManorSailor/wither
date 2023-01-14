@@ -18,5 +18,69 @@
     />
     <title>Wither - Weather app</title>
   </head>
-  <body></body>
+  <body
+    class="min-h-screen bg-gradient-to-b from-sky-500 to-blue-500 text-white"
+  >
+    <header
+      class="flex flex-wrap items-center justify-center gap-4 px-8 py-6 md:justify-between"
+    >
+      <a href="#" class="flex items-center gap-1">
+        <iconify-icon
+          icon="ph:fire"
+          width="28"
+          style="vertical-align: -0.125em"
+          aria-label="Fire icon"
+          inline
+        ></iconify-icon>
+        <h1 class="text-2xl font-semibold">Wither</h1>
+      </a>
+
+      <nav class="">
+        <ul class="flex flex-wrap items-center justify-center gap-4">
+          <li class="">
+            <form
+              id="search-form"
+              class="relative flex items-center"
+              action="#"
+            >
+              <label for="location" class="relative">
+                <input
+                  id="location"
+                  class="rounded-2xl bg-sky-800 px-4 py-1 text-lg font-semibold"
+                  type="search"
+                  name="location"
+                  placeholder=" "
+                  tabindex="0"
+                />
+                <span
+                  class="pointer-events-none absolute top-0 left-0 ml-5 translate-y-2/4 text-sm opacity-50"
+                  >Search Location</span
+                >
+              </label>
+
+              <button class="absolute right-0 z-10 p-2" aria-label="Search">
+                <iconify-icon
+                  icon="ph:magnifying-glass"
+                  width="21"
+                  style="vertical-align: -0.125em"
+                  aria-hidden="true"
+                  inline
+                ></iconify-icon>
+              </button>
+            </form>
+          </li>
+
+          <li class="">
+            <select
+              id="api-provider"
+              class="rounded-2xl bg-sky-800 px-4 py-1"
+              disabled
+            >
+              <option value="open-weather">Open Weather API</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </body>
 </html>
