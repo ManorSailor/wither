@@ -11,14 +11,14 @@ function fetchData(url) {
 
 /**
  * Date formatter utility converts Unix time into date
- * @param {number|Date} date - Must be either a valid unixTime or Date instance object
+ * @param {number|Date} date - Must be either a valid unixTime or Date instance
  * @param {string} formatStr - Date format string. See date-fns docs
  * @returns {string}
  */
-function formatDate(date, formatStr = "HH:mm - EEEE, dd MMM''yy") {
+function formatDate(date, formatStr = "hh:mm - EEEE, dd MMM''yy") {
   // If valid, decide if its unix time or date object
   if (isDateValid(date)) {
-    // Checks if the date in an instance of Date
+    // Checks if date in an instance of Date
     return isDate(date)
       ? format(date, formatStr)
       : format(fromUnixTime(date), formatStr);
