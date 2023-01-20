@@ -1,9 +1,9 @@
 // Acts as a common wrapper to get location data
 // Composite Pattern + Dependency Inversion because we do not want to rely on any API directly & want our app to treat all provider objects as the same
-import GeoCodeAPI from './providers/GeoCodeAPI';
+import OpenWeather from './providers/location/OpenWeather';
 
 function LocationAPI() {
-  let LocationProvider = GeoCodeAPI;
+  let LocationProvider = OpenWeather;
 
   const getLocation = async (location) => {
     const locations = await LocationProvider

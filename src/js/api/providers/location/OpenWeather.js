@@ -1,8 +1,8 @@
 // API specific implementation with an adapter method to adapt data according to our app's need
 // Singleton + Adapter pattern
-import { fetchData } from '../../utils';
+import { fetchData } from '../../../utils';
 
-const GeoCodeAPI = (() => {
+const OpenWeather = (() => {
   const LIMIT = 8;
   const KEY = 'bcb623dd560f25e7471cc8e69b50ce19';
 
@@ -28,4 +28,4 @@ const GeoCodeAPI = (() => {
   return { fetchLocations, formatLocation, isDataValid };
 })();
 
-export default GeoCodeAPI;
+export default OpenWeather;

@@ -1,6 +1,6 @@
 // Acts as a common wrapper to get weather data
 // Composite Pattern + Dependency Inversion because we do not want to rely on any API directly & want our app to treat all provider objects as the same
-import OpenWeather from './providers/OpenWeather';
+import OpenWeather from './providers/weather/OpenWeather';
 
 function WeatherAPI() {
   const WeatherProvider = OpenWeather;

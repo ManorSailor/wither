@@ -1,6 +1,6 @@
 // API specific implementation with an adapter method to adapt data according to our app's need
 // Singleton + Adapter pattern
-import { fetchData, formatDate } from '../../utils';
+import { fetchData, formatDate } from '../../../utils';
 
 const OpenWeather = (() => {
   const KEY = '49257f6591cfc3ed8daf0b5970d519cb';
