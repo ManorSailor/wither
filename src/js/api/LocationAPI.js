@@ -11,7 +11,7 @@ function LocationAPI() {
       .catch((error) => Promise.reject(error));
 
     return LocationProvider.isDataValid(locations)
-      ? locations[0]
+      ? LocationProvider.formatLocation(locations[0])
       : Promise.reject('Location not found!');
   };
 
