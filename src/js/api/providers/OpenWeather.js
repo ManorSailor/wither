@@ -10,6 +10,10 @@ const OpenWeather = (() => {
       `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${KEY}&units=metric&exclude=hourly,minutely,alerts`
     );
 
+  const isValidData = (weather) => {
+    return Boolean(weather.cod !== '400');
+  };
+
   // Adapt API data into a format our app expects
   const formatWeather = ({
     current: { temp, humidity, visibility, weather, feels_like, wind_speed },
@@ -51,7 +55,7 @@ const OpenWeather = (() => {
     return { current, weekly };
   };
 
-  return { fetchWeather, formatWeather };
+  return { fetchWeather, formatWeather, isValidData };
 })();
 
 export default OpenWeather;
