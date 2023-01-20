@@ -6,6 +6,7 @@ module.exports = {
     devServer: {
         static: './dist',
     },
+    devtool: 'source-map',
     module: {
         rules: [
             {
@@ -13,5 +14,8 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'postcss-loader']
             },
         ],
+    },
+    experiments: {
+        topLevelAwait: true
     },
 };
