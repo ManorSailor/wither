@@ -11,6 +11,10 @@ const GeoCodeAPI = (() => {
       `http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=${LIMIT}&appid=${KEY}`
     );
 
+  const isDataValid = (locations) => {
+    return Boolean(locations?.length);
+  };
+
   const formatLocation = ({ lat, lon, name: city, state, country }) => {
     return {
       lat,
@@ -21,7 +25,7 @@ const GeoCodeAPI = (() => {
     };
   };
 
-  return { fetchLocations, formatLocation };
+  return { fetchLocations, formatLocation, isDataValid };
 })();
 
 export default GeoCodeAPI;
