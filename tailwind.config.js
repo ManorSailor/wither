@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
+        sans: ['Rubik', 'Quicksand', ...defaultTheme.fontFamily.sans],
+        quicksand: ['Quicksand', 'sans-serif'],
       },
     },
   },
