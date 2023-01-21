@@ -83,27 +83,27 @@
       </nav>
     </header>
 
-    <main class="flex-grow">
+    <main class="">
       <!-- Current Weather -->
       <section class="relative flex flex-col items-center justify-center gap-4">
         <div class="flex items-center gap-4">
           <h3 class="flex items-center text-6xl font-semibold">
-            <span class="">21</span>
+            <span id="current-temp" class="">21</span>
             <sup class="">&deg;C</sup>
           </h3>
 
           <div class="self-end">
-            <h4 class="text-3xl font-semibold">London, UK</h4>
-            <p class="opacity-75">06:09 - Monday, 9 Sep '23</p>
+            <h4 id="location" class="text-3xl font-semibold">London, UK</h4>
+            <p id="date-time" class="opacity-75">06:09 - Monday, 9 Sep '23</p>
           </div>
 
           <div class="flex flex-col items-center">
-            <img
+            <img id="weather-icon"
               class="max-h-12 w-24 object-cover"
               src="http://openweathermap.org/img/wn/10d@2x.png"
               alt=""
             />
-            <p class="text-2xl font-semibold">Rainy</p>
+            <p id="weather-desc" class="text-2xl font-semibold">Rainy</p>
           </div>
         </div>
       </section>
