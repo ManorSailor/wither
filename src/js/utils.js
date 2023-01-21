@@ -25,4 +25,8 @@ function formatDate(date, formatStr = "hh:mm - EEEE, dd MMM''yy") {
   }
 }
 
-export { fetchData, formatDate };
+function isValidValue(query) {
+  return query && query.trim() !== '';
+}
+
+export { fetchData, formatDate, isValidValue };
