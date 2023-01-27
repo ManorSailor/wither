@@ -20,4 +20,4 @@ function WeatherAPI() {
   };
 }
 
-export default WeatherAPI();
+export default WeatherAPI;
