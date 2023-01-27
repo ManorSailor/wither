@@ -3,7 +3,7 @@
 import { fetchData } from '../../../utils';
 
 const OpenWeather = (() => {
-  const LIMIT = 8;
+  const LIMIT = 5;
   const KEY = 'bcb623dd560f25e7471cc8e69b50ce19';
 
   const fetchLocations = (location) =>
