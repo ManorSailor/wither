@@ -5,19 +5,17 @@ import OpenWeather from './providers/location/OpenWeather';
 function LocationAPI() {
   let LocationProvider = OpenWeather;
 
-  const getLocation = async (location) => {
+  const fetchLocations = async (location) => {
     const locations = await LocationProvider
       .fetchLocations(location)
       .catch((error) => Promise.reject(error));
 
     return LocationProvider.isDataValid(locations)
-      ? LocationProvider.formatLocation(locations[0])
+      ? LocationProvider.formatLocation(locations)
       : Promise.reject('Location not found!');
   };
 
-  return {
-    getLocation,
-  };
+  return { fetchLocations };
 }
 
 export default LocationAPI();
