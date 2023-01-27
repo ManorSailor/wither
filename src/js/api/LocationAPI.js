@@ -18,4 +18,4 @@ function LocationAPI() {
   return { fetchLocations };
 }
 
-export default LocationAPI();
+export default LocationAPI;
