@@ -15,14 +15,21 @@ const OpenWeather = (() => {
     return Boolean(locations?.length);
   };
 
-  const formatLocation = ({ lat, lon, name: city, state, country }) => {
-    return {
-      lat,
-      lon,
-      city,
-      state,
-      country,
-    };
+  const formatLocation = (locations) => {
+    return locations?.reduce(
+      (formattedLocations, { lat, lon, name: city, state, country }) => {
+        formattedLocations.push({
+          lat,
+          lon,
+          city,
+          state,
+          country,
+        });
+
+        return formattedLocations;
+      },
+      []
+    );
   };
 
   return { fetchLocations, formatLocation, isDataValid };
