@@ -52,7 +52,7 @@ const OpenWeather = (() => {
       []
     );
 
-    return { current, weekly };
+    return { current, weekly, units: 'metric' };
   };
 
   return { fetchWeather, formatWeather, isValidData };
